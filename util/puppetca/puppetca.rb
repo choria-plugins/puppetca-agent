@@ -6,7 +6,7 @@ module MCollective
 
       def initialize
         config = Config.instance
-        @puppetca = config.pluginconf.fetch('puppetca.puppetca', '/usr/bin/puppet cert')
+        @puppetca = config.pluginconf.fetch('puppetca.puppetca', '/opt/puppetlabs/bin/puppet cert')
       end
 
       # Clean the cert

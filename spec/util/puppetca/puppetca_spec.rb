@@ -36,7 +36,7 @@ module MCollective
         it 'should clean waiting and signed certs' do
           shell.expects(:runcommand)
           @puppetca.stubs(:certificates).returns([[], ['rspec']])
-          Shell.expects(:new).with('/usr/bin/puppet cert clean rspec --color=none', :stdout => '').returns(shell)
+          Shell.expects(:new).with('/opt/puppetlabs/bin/puppet cert clean rspec --color=none', :stdout => '').returns(shell)
           @puppetca.clean('rspec')
         end
       end
@@ -60,7 +60,7 @@ module MCollective
 
         it 'should sign a cert' do
           @puppetca.stubs(:certificates).returns([['rspec'], []])
-          Shell.stubs(:new).with('/usr/bin/puppet cert sign rspec --color=none', :stdout => '').returns(shell)
+          Shell.stubs(:new).with('/opt/puppetlabs/bin/puppet cert sign rspec --color=none', :stdout => '').returns(shell)
           shell.expects(:runcommand)
           @puppetca.sign('rspec')
         end
@@ -87,7 +87,7 @@ module MCollective
         it 'should return lists of signed and waiting requests' do
           output = "+ rspec_signed\nrspec_waiting\n"
 
-          Shell.stubs(:new).with('/usr/bin/puppet cert list --all --color=none', :stdout => output).returns(shell)
+          Shell.stubs(:new).with('/opt/puppetlabs/bin/puppet cert list --all --color=none', :stdout => output).returns(shell)
           shell.expects(:runcommand)
 
           waiting, signed = @puppetca.certificates(output)
