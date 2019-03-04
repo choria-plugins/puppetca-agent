@@ -2,7 +2,7 @@ metadata    :name        => "puppetca",
             :description => "Agent to manage Puppet certificates",
             :author      => "R.I.Pienaar",
             :license     => "Apache-2.0",
-            :version     => "4.0.1",
+            :version     => "4.0.2",
             :url         => "https://github.com/choria-plugins/puppetca-agent",
             :timeout     => 20
 
