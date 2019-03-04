@@ -2,6 +2,10 @@
 
 Change history for `choria/mcollective_agent_puppetca`
 
+## 4.0.2
+
+ * Update URLs and contribution guidelines
+
 ## 4.0.1
 
 Released 2018-04-20
