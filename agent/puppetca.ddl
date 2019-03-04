@@ -1,9 +1,9 @@
 metadata    :name        => "puppetca",
             :description => "Agent to manage Puppet certificates",
             :author      => "R.I.Pienaar",
-            :license     => "ASL 2.0",
+            :license     => "Apache-2.0",
             :version     => "4.0.1",
-            :url         => "https://github.com/puppetlabs/mcollective-plugins",
+            :url         => "https://github.com/choria-plugins/puppetca-agent",
             :timeout     => 20
 
 requires :mcollective => '2.2.1'
