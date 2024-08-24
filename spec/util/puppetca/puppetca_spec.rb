@@ -28,9 +28,9 @@ module MCollective
         it 'should fail if no certs exist' do
           @puppetca.stubs(:certificates).returns([[],[]])
 
-          expect{
+          lambda {
             @puppetca.clean('rspec')
-          }.to raise_error
+          }.should raise_error(RuntimeError, "Could not find any certificates to delete")
         end
 
         it 'should clean waiting and signed certs' do
@@ -45,17 +45,17 @@ module MCollective
         it 'should fail if the cert has already been signed' do
           @puppetca.stubs(:certificates).returns([[],['rspec']])
 
-          expect{
+          lambda {
             @puppetca.sign('rspec')
-          }.to raise_error
+          }.should raise_error(RuntimeError, "Already have a certificate for rspec. Not attempting to sign again")
         end
 
         it 'should fail if there are no certs to sign' do
           @puppetca.stubs(:certificates).returns([[],[]])
 
-          expect{
+          lambda {
             @puppetca.sign('rspec')
-          }.to raise_error
+          }.should raise_error(RuntimeError, "Could not find certificate to sign: rspec")
         end
 
         it 'should sign a cert' do
