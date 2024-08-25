@@ -1,8 +1,8 @@
 #!/bin/env rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../', 'agent', 'puppetca.rb')
-require File.join(File.dirname(__FILE__), '../../', 'util', 'puppetca', 'puppetca.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'agent', 'puppetca.rb')
+require File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'util', 'puppetca', 'puppetca.rb')
 
 module MCollective
   module Agent
@@ -12,7 +12,7 @@ module MCollective
 
       before do
         Util::Puppetca.stubs(:new).returns(puppetca)
-        agent_file = File.join(File.dirname(__FILE__), '../../', 'agent', 'puppetca.rb')
+        agent_file = File.join(File.dirname(__FILE__), '../../',  'files', 'mcollective', 'agent', 'puppetca.rb')
         @agent = MCollective::Test::LocalAgentTest.new('puppetca', :agent_file => agent_file).plugin
       end
 
