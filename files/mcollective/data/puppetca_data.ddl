@@ -2,7 +2,7 @@ metadata    :name        => "puppetca",
             :description => "Checks the status of a puppet certificate",
             :author      => "R.I.Pienaar <rip@devco.net>",
             :license     => "ASL 2.0",
-            :version     => "4.0.2",
+            :version     => "4.1.0",
             :url         => "https://github.com/choria-plugins/puppetca-agent",
             :timeout     => 3
 
