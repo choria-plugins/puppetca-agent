@@ -3,7 +3,15 @@
 The puppetca agent lets you sign, list, revoke, clean and determine the status of certificates on your
 Puppet Certificate Authorities
 
-<!--- actions -->
+## Actions
+
+This agent provides the following actions, for details about each please run `mco plugin doc agent/puppetca`
+
+ * **clean** - Performs a puppetca --clean on a certficate
+ * **list** - Lists all requested and signed certificates
+ * **revoke** - Revokes a certificate by doing the same as clean
+ * **sign** - Signs a certificate request
+ * **status** - Find a certificate's status
 
 ## Agent Installation
 

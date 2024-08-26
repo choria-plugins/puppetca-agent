@@ -1,7 +1,7 @@
 #!/bin/env rspec
 
 require 'spec_helper'
-require File.join(File.dirname(__FILE__), '../../../', 'util', 'puppetca', 'puppetca.rb')
+require File.join(File.dirname(__FILE__), '../../../',  'files', 'mcollective', 'util', 'puppetca', 'puppetca.rb')
 
 module MCollective
   module Util
